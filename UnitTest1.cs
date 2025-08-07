@@ -134,6 +134,21 @@ namespace InsuranceQuoteTests
         }
 
 
+        // Test 3 - Valid with discount gets $3905
+        [Test]
+        public void Test3_ValidWithDiscount_Quote3905()
+        {
+            // Arrange
+            string expectedQuote = "$3905";
+
+            // Act
+            FillCompleteForm("35", "9", "2");
+            string actualQuote = driver?.FindElement(By.Id("finalQuote")).GetAttribute("value") ?? string.Empty;
+
+            // Assert
+            Assert.That(actualQuote, Is.EqualTo(expectedQuote));
+        }
+
 
         [TearDown]
         public void Teardown()
