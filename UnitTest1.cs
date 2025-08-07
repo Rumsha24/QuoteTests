@@ -118,6 +118,7 @@ namespace InsuranceQuoteTests
             Assert.That(actualQuote, Is.EqualTo(expectedQuote));
         }
 
+
         
         [TearDown]
         public void Teardown()
